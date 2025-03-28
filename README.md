@@ -5,6 +5,7 @@
 - addition, subtraction, multiplication and division
 - Structured log printing
 - Graceful error handling and clear error messages
+- Extensive test cases
 
 ## Requisites
 - Java
@@ -58,7 +59,7 @@ curl --location 'localhost:8383/v1/calculator/calculate' \
 }
 ```
 
-Addition Case 03
+### Addition Case 03
 
 ```shell
 curl --location 'localhost:8383/v1/calculator/calculate' \
