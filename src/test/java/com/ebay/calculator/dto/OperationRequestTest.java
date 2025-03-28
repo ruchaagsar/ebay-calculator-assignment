@@ -14,7 +14,7 @@ public class OperationRequestTest {
         operationRequest.setNum2(2);
 
         assertEquals(1, operationRequest.getNum1());
-        assertEquals(2, operationRequest.getNum1());
+        assertEquals(2, operationRequest.getNum2());
         assertEquals(Operation.ADD, operationRequest.getOp());
     }
 }

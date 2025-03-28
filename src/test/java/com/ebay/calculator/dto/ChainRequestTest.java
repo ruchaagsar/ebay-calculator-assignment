@@ -19,6 +19,7 @@ public class ChainRequestTest {
 
         List<ChainOperationRequest> chainOperationRequestList = new ArrayList<>();
         chainOperationRequestList.add(chainOperationRequest);
+        chainRequest.setOperations(chainOperationRequestList);
 
         assertEquals(100, chainRequest.getInitialValue());
         assertEquals(chainOperationRequestList, chainRequest.getOperations());
