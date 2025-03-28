@@ -2,6 +2,8 @@ package com.ebay.calculator.strategy;
 
 import org.junit.jupiter.api.Test;
 
+import static java.lang.Double.NaN;
+import static java.lang.Double.POSITIVE_INFINITY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -13,5 +15,7 @@ public class DivideOperationTest {
         assertEquals(2.0, divideOperation.execute(6.0, 3.0));
         assertEquals(-1.0, divideOperation.execute(-2.0, 2.0));
         assertThrows(ArithmeticException.class, () -> divideOperation.execute(1.0, 0.0));
+        assertThrows(ArithmeticException.class, () -> divideOperation.execute(POSITIVE_INFINITY, 0.0));
+        assertThrows(ArithmeticException.class, () -> divideOperation.execute(NaN, 0.0));
     }
 }

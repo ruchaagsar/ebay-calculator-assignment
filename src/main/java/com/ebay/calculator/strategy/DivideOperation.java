@@ -18,6 +18,7 @@ public class DivideOperation implements OperationStrategy {
 
 		if (Double.isInfinite(num1.doubleValue()) || Double.isInfinite(num2.doubleValue())) {
 			log.warn("DoubleDivideOperation: Infinity encountered in division, result may be infinite");
+			throw new ArithmeticException("Invalid operation: infinity encountered");
 		}
 
 		double result = num1.doubleValue() / num2.doubleValue();
